@@ -1,0 +1,20 @@
+{
+  "name": "express-testing-repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruud-juffermans/express-testing-repo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ruud-juffermans/express-testing-repo/issues"
+  },
+  "homepage": "https://github.com/ruud-juffermans/express-testing-repo#readme"
+}
