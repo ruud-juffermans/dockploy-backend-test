@@ -1,11 +1,26 @@
-const express = require('express');
-const app = express();
-const port = 3001;
+const express = require("express");
+const cors = require("cors");
 
-app.get('/', (req, res) => {
-    res.send('Hello World');
+const app = express();
+const PORT = process.env.PORT || 3001;
+
+// middleware
+app.use(cors());
+app.use(express.json());
+
+// health check
+app.get("/health", (req, res) => {
+  res.json({ status: "ok" });
 });
 
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+// API endpoint
+app.get("/api/message", (req, res) => {
+  res.json({
+    message: "Hello from Express API",
+    timestamp: new Date().toISOString(),
+  });
+});
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`API running on port ${PORT}`);
 });
