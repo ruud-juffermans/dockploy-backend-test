@@ -6,9 +6,11 @@ const PORT = process.env.PORT || 3001;
 
 const app = express();
 
+const corsOrigin = process.env.CORS_ORIGIN || "https://ruudjuffermans.nl";
+
 app.use(
   cors({
-    origin: "https://ruudjuffermans.nl",
+    origin: corsOrigin,
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
